@@ -1,92 +1,217 @@
-:root {
-  --primary-color: #674188 ;
+/* :root {
+  --primary-color: #F7EFE5;
   --secondary-color: #C8A1E0 ;
   --tertiary-color: #E2BFD9;
-  --bg-color: #F7EFE5 ;
+  --bg-color: #674188 ;
+} */
+
+
+:root {
+  --primary-color: #EEEEEE ;
+  --secondary-color: #A91D3A ;
+  --tertiary-color: #C73659;
+  --bg-color: #151515 ;
 }
+
+/* :root {
+  --primary-color: #1A1A2E ;
+  --secondary-color: #16213E ;
+  --tertiary-color: #0F3460;
+  --bg-color: #E94560 ;
+} */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Edu QLD Beginner", cursive;
+  transition-duration: 200ms;
 }
 
 body {
   background: var(--bg-color);
-}
-
-
-
-
-
-
-
-
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  color: var(--primary-color);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  padding: 14px;
+  color: var(--primary-color);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+p{
+  font-size: 1.05em;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.darkerText{
+  color: var(--secondary-color);
+}
+
+header, main, footer{
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  /* background-color: var(--secondary-color); */
+}
+
+nav{
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+nav a, a{
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  text-decoration: none;
+  color: var(--tertiary-color);
+  border: 1px dotted var(--secondary-color);
+  border-radius: 2rem;
+  padding: 0.5rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+nav a:hover{
+  opacity: 0.7;
+
+}
+
+main, 
+section,
+.nameContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  gap: 4rem;
+}
+
+section{
+  gap: 3rem;
+}
+
+.statsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px; 
+}
+
+.imgContainer{
+  border-radius: 100%;
+  overflow: hidden;
+  max-width: 8rem;
+}
+
+.imgContainer img{
+  width: 100%;
+  height: 100%;
+}
+
+.stats{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stats>div{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stats div i {
+  font-size: 1.4rem;
+}
+
+.stats div div{
+  display: grid;
+  place-items: center;
+  min-width: 2rem;
+}
+
+.aboutMe{
+  line-height: 2em;
+}
+
+.outreach{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: auto;
+}
+
+.outreach i {
+  transform: rotate(-45deg);
+  text-decoration: none;
+}
+
+.outreach:hover{
+  opacity: 0.7;
+}
+
+.projectContainer{
+  display: flex;
+  flex-direction: column;
+  gap:2rem
+}
+
+.projectItem{
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.headerText{
+  margin-bottom: 24px;
+}
+
+.projectItem div:first-child{
+  display: flex;
+  flex-direction: column;
+  min-width: 70%;
+  gap: 14px;
+}
+
+.projectItem div:last-child{
+  aspect-ratio: 16/9;
+  max-width: 30%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.projectItem div:last-child img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+
+
+
+@media (min-width: 640px) {
+
+  .statsContainer{
+    flex-direction: row;
   }
-  a:hover {
-    color: #747bff;
+
+  .stats{
+    gap: 0px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .aboutMe{
+    margin-right: auto;
+    width: 80%;
   }
-} */
+}
