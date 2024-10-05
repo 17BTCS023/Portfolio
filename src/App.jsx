@@ -38,7 +38,7 @@ function App() {
           </div>
           <div className="outreach darkerText">
             <i class="fa-solid fa-arrow-right"></i>
-            <a href="">Email me!</a>
+            <a href="mailto:post.mk02@gmail.com">Email me!</a>
           </div>
           <div className="statsContainer">
             <div className="imgContainer">
@@ -70,6 +70,20 @@ function App() {
             <div>
               <p className="darkerText">Jan 24, 2024</p>
               <p>Just a Todo App</p>
+              <div className="linkContainer">
+                <a target="_blank" href="www.google.com" className="linkItem">
+                  <div>
+                    <i className="fa-brands fa-github"></i>
+                  </div>
+                  <p>Github</p>
+                </a>
+                <a target="_blank" href="www.google.com" className="linkItem">
+                  <div>
+                    <i className="fa-solid fa-bolt"></i>
+                  </div>
+                  <p>Live</p>
+                </a>
+              </div>
             </div>
             <div>
               <img src="/public/Todo-App.png" alt="" />
@@ -79,6 +93,20 @@ function App() {
             <div>
               <p className="darkerText">Sept 24, 2024</p>
               <p>Fetching an Astronomy picture a day from NASA's APOD API </p>
+              <div className="linkContainer">
+                <a target="_blank" href="www.google.com" className="linkItem">
+                  <div>
+                    <i className="fa-brands fa-github"></i>
+                  </div>
+                  <p>Github</p>
+                </a>
+                <a target="_blank" href="www.google.com" className="linkItem">
+                  <div>
+                    <i className="fa-solid fa-bolt"></i>
+                  </div>
+                  <p>Live</p>
+                </a>
+              </div>
             </div>
             <div>
               <img src="/public/APOD.png" alt="" />
